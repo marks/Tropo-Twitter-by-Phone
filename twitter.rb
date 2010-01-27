@@ -1,7 +1,7 @@
 %w(rubygems sinatra tropo-webapi-ruby/lib/tropo-webapi-ruby.rb pp open-uri rexml/document goodies.rb).each{|lib| require lib}
 enable :sessions
 
-post '/start.json' do
+post '/index.json' do
   v = Tropo::Generator.parse request.env["rack.input"].read
   session[:id] = v[:session][:id]
   session[:caller] = v[:session][:from]
