@@ -1,4 +1,7 @@
 %w(rubygems sinatra tropo-webapi-ruby pp open-uri rexml/document goodies.rb).each{|lib| require lib}
+require File.dirname(__FILE__) + '/vendor/gems/environment'
+Bundler.require_env
+
 enable :sessions
 
 post '/index.json' do
