@@ -1,4 +1,4 @@
-%w(rubygems sinatra tropo-webapi-ruby/lib/tropo-webapi-ruby.rb pp open-uri rexml/document goodies.rb).each{|lib| require lib}
+%w(rubygems sinatra tropo-webapi-ruby pp open-uri rexml/document goodies.rb).each{|lib| require lib}
 enable :sessions
 
 post '/index.json' do
